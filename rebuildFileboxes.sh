@@ -10,7 +10,7 @@ docker run --name=nodefilebox sirile/nodefilebox
 # Javafilebox
 docker rm java8filebox
 docker rmi sirile/java8filebox
-docker run --name=javafilebox sirile/java8filebox
+docker run --name=java8filebox sirile/java8filebox
 # Jettyfilebox
 docker rm jettyfilebox
 docker rmi sirile/jettyfilebox
