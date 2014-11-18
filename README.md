@@ -2,6 +2,7 @@
 
 - Update this readme!
 - Add decriptions under the box-folders (basebox is done)
+- Add the container builds to docker.io
 
 # BusyBox based containers
 
