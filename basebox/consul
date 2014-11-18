@@ -1,0 +1,13 @@
+#!/bin/sh
+# If DC is given, we know that weave should be running
+if [ -z $DC ]
+then
+  exec /usr/bin/consul agent -join=consul -data-dir /tmp/consul -config-dir /etc/consul.d
+else
+  # Wait for the network to be ready
+  while ! grep -q ^1$ /sys/class/net/ethwe/carrier 2>/dev/null
+    do sleep 1
+  done
+  IP=`ip -4 -o addr show dev ethwe 2> /dev/null |awk '{split($4,a,"/") ;print a[1]}'`
+  exec /usr/bin/consul agent -advertise $IP -join=consul -dc $DC -data-dir /tmp/consul -config-dir /etc/consul.d
+fi
