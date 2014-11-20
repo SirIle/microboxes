@@ -1,5 +1,5 @@
 ( cd basebox && docker build -t sirile/basebox . )
 ( cd consulbox && docker build -t sirile/consulbox . )
-( cd nodebox && docker build -t sirile/nodebox . )
+( cd nodejsbox && docker build -t sirile/nodejsbox . )
 ( cd javabox && docker build -t sirile/javabox . )
 ( cd jettybox && docker build -t sirile/jettybox . )

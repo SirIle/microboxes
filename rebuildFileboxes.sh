@@ -4,9 +4,9 @@ docker rm basefilebox
 docker rmi sirile/basefilebox
 docker run --name=basefilebox sirile/basefilebox
 # Then nodefilebox
-docker rm nodefilebox
-docker rmi sirile/nodefilebox
-docker run --name=nodefilebox sirile/nodefilebox
+docker rm nodejsfilebox
+docker rmi sirile/nodejsfilebox
+docker run --name=nodejsfilebox sirile/nodejsfilebox
 # Javafilebox
 docker rm java8filebox
 docker rmi sirile/java8filebox
