@@ -20,9 +20,9 @@ RUN (cd /opt && tar xf /tmp/logstash.tar)
 RUN rm -rf /tmp/*
 
 # Set the scripts in place
-COPY logstash-syslog.json /opt/logstash-1.4.2/logstash-syslog.json
 COPY elasticsearch /etc/service/elasticsearch/run
 COPY logstash /etc/service/logstash/run
+COPY logstash-syslog.json /opt/logstash-1.4.2/logstash-syslog.json
 
 # Expose the ports
 EXPOSE 5000 9200
